@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 91229f7f31dd447668a844907a82f3ca, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - c57b67020100e56519390400f81d64a5: 21300000
+    - 6101fb4304ab83168aff0f6ee5e15be3: 21300000
+    - d34d1768fa593faeb990606684e5ea82: 21300000
+    - 743d3129bbc7aadee9dae5d61bc4ff19: 21300000
+    - 5af430c93e7a1d1e2986f377eedc9800: 21300000
+    - 22c3a7d9294cb8320aba52bb1b2e4d0d: 21300000
+    - cc14f1fcfb687e9698e4d3d68c02b910: 21300000
+    - e368642fc88c8065a947067368bd1b1a: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: c57b67020100e56519390400f81d64a5, type: 3}
+  - {fileID: 21300000, guid: 6101fb4304ab83168aff0f6ee5e15be3, type: 3}
+  - {fileID: 21300000, guid: d34d1768fa593faeb990606684e5ea82, type: 3}
+  - {fileID: 21300000, guid: 743d3129bbc7aadee9dae5d61bc4ff19, type: 3}
+  - {fileID: 21300000, guid: 5af430c93e7a1d1e2986f377eedc9800, type: 3}
+  - {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d, type: 3}
+  - {fileID: 21300000, guid: cc14f1fcfb687e9698e4d3d68c02b910, type: 3}
+  - {fileID: 21300000, guid: e368642fc88c8065a947067368bd1b1a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - fighter
+  - healer
+  - enemy2
+  - active
+  - enemy1
+  - button
+  - grid_cell
+  - range
+  m_RenderDataMap: {}
+  m_Tag: SpriteAtlas
+  m_IsVariant: 0
