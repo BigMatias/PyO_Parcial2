@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -15,5 +16,10 @@ public class CharacterHUD : MonoBehaviour
     private void UpdateHPText(int hp)
     {
         hpText.text = hp.ToString();
+    }
+
+    private void OnDestroy()
+    {
+        character.OnHPChanged -= UpdateHPText;
     }
 }

@@ -8,6 +8,7 @@ public class PlayerButtons : MonoBehaviour
     [SerializeField] private Character character;
     [SerializeField] private Button[] actionButtons;
     [SerializeField] private TargetSelectionManager targetSelectionManager;
+    [SerializeField] private TurnManager turnManager;
 
     private void Start()
     {
@@ -28,11 +29,25 @@ public class PlayerButtons : MonoBehaviour
                 actionButtons[i].gameObject.SetActive(false);
             }
         }
+
+        turnManager.OnTurnStarted += HandleTurnStarted;
+        SetInteractable(turnManager.CurrentCharacter == character); 
+    }
+
+    private void OnDestroy()
+    { 
+        turnManager.OnTurnStarted -= HandleTurnStarted;
+    }
+
+    private void HandleTurnStarted(Character activeCharacter)
+    {
+        SetInteractable(activeCharacter == character);
     }
 
     public void SetInteractable(bool interactable)
     {
         foreach (Button b in actionButtons)
-            b.interactable = interactable;
+            if (b.gameObject.activeSelf)
+                b.interactable = interactable;
     }
 }

@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                movesRemaining--; // intento fallido también consume movimiento
+                movesRemaining--;
             }
         }
     }
@@ -53,7 +53,6 @@ public class EnemyAI : MonoBehaviour
 
         Player target = closestPlayers[Random.Range(0, closestPlayers.Count)];
         enemy.TryPerformAction(ActionType.MeleeAttack, target);
-        // si falla melee, probamos rango
         if (!enemy.TryPerformAction(ActionType.MeleeAttack, target))
             enemy.TryPerformAction(ActionType.RangedAttack, target);
     }

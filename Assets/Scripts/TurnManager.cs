@@ -8,6 +8,7 @@ public class TurnManager : MonoBehaviour
     [SerializeField] private GameObject[] players;
     [SerializeField] private GameObject[] enemies;
     [SerializeField] private EnemyAI enemyAI;
+    [SerializeField] private GameStateChecker gameStateChecker;
     
     public Character CurrentCharacter { get; private set; }
     public int MovesRemaining { get; private set; }
@@ -73,6 +74,7 @@ public class TurnManager : MonoBehaviour
         if (success)
         {
             HasActed = true;
+            gameStateChecker.CheckGameState();
             EndTurn();
         }
         return success;
@@ -90,4 +92,5 @@ public class TurnManager : MonoBehaviour
         enemyAI.PerformTurn(enemy);
         EndTurn();
     }
+    
 }

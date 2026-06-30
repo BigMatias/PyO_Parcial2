@@ -28,7 +28,10 @@ public abstract class Character : MonoBehaviour
         currentHP -= amount;
         OnHPChanged?.Invoke(currentHP);
         if (currentHP <= 0)
+        {
+            currentHP = 0;
             Die();
+        }
     }
 
     public virtual void Heal(int amount)
