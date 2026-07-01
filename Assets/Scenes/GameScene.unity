@@ -1076,6 +1076,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 179.45879
       objectReference: {fileID: 0}
+    - target: {fileID: 890544329900090499, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 890544329900090499, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d,
+        type: 3}
     - target: {fileID: 2924710217572555871, guid: 5670e84fcf2344178b07d96b19be36a5,
         type: 3}
       propertyPath: hpText
@@ -1096,6 +1107,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPlayer3Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 5286916415502170663, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286916415502170663, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d,
+        type: 3}
     - target: {fileID: 5550792957075268909, guid: 5670e84fcf2344178b07d96b19be36a5,
         type: 3}
       propertyPath: m_Name
@@ -1212,6 +1234,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e368642fc88c8065a947067368bd1b1a,
         type: 3}
+    - target: {fileID: 5788194385370756958, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6799382431953732671, guid: 5670e84fcf2344178b07d96b19be36a5,
         type: 3}
       propertyPath: m_RaycastTarget
@@ -3014,6 +3041,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d34d1768fa593faeb990606684e5ea82,
         type: 3}
+    - target: {fileID: 4707470268458996117, guid: 5e94252e98836b7a78daa7bf5a0c8b02,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5772748536842118430, guid: 5e94252e98836b7a78daa7bf5a0c8b02,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3617,6 +3649,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealSelfButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6701822723534953555, guid: 72c992229a71692c08d612782f3557e2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d,
+        type: 3}
     - target: {fileID: 8865907420587212140, guid: 72c992229a71692c08d612782f3557e2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3802,6 +3840,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 25.213997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707470268458996117, guid: 5e94252e98836b7a78daa7bf5a0c8b02,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5772748536842118430, guid: 5e94252e98836b7a78daa7bf5a0c8b02,
         type: 3}
@@ -4140,7 +4183,23 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 2938056019294661236}
+    - target: {fileID: 4410275109724788515, guid: 58b2acfb3acfb90d88b8165a7bebcbc7,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410275109724788515, guid: 58b2acfb3acfb90d88b8165a7bebcbc7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d,
+        type: 3}
     - target: {fileID: 4765162543270270266, guid: 58b2acfb3acfb90d88b8165a7bebcbc7,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489549821558810203, guid: 58b2acfb3acfb90d88b8165a7bebcbc7,
         type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -4245,6 +4304,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6135000202434407202, guid: 58b2acfb3acfb90d88b8165a7bebcbc7,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6135000202434407202, guid: 58b2acfb3acfb90d88b8165a7bebcbc7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d,
+        type: 3}
     - target: {fileID: 6632425311067730674, guid: 58b2acfb3acfb90d88b8165a7bebcbc7,
         type: 3}
       propertyPath: m_Name
@@ -4278,6 +4348,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1044244680}
     m_Modifications:
+    - target: {fileID: 890544329900090499, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 890544329900090499, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d,
+        type: 3}
     - target: {fileID: 2098480695370768316, guid: 5670e84fcf2344178b07d96b19be36a5,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -4308,6 +4389,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPlayer2Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 4995609661476616389, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d,
+        type: 3}
+    - target: {fileID: 5286916415502170663, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286916415502170663, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22c3a7d9294cb8320aba52bb1b2e4d0d,
+        type: 3}
     - target: {fileID: 5603196599461165790, guid: 5670e84fcf2344178b07d96b19be36a5,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4406,6 +4504,11 @@ PrefabInstance:
     - target: {fileID: 5603196599461165790, guid: 5670e84fcf2344178b07d96b19be36a5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788194385370756958, guid: 5670e84fcf2344178b07d96b19be36a5,
+        type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6799382431953732671, guid: 5670e84fcf2344178b07d96b19be36a5,

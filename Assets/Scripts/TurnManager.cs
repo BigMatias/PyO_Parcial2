@@ -36,8 +36,10 @@ public class TurnManager : MonoBehaviour
 
     private void StartTurn()
     {
+        int next = 1;
+        
         while (!turnOrder[currentIndex].IsAlive)
-            currentIndex = (currentIndex + 1) % turnOrder.Count;
+            currentIndex = (currentIndex + next) % turnOrder.Count;
 
         CurrentCharacter = turnOrder[currentIndex];
         MovesRemaining = CurrentCharacter.Speed;
@@ -81,8 +83,9 @@ public class TurnManager : MonoBehaviour
 
     public void EndTurn()
     {
+        int next = 1;
         OnTurnEnded?.Invoke();
-        currentIndex = (currentIndex + 1) % turnOrder.Count;
+        currentIndex = (currentIndex + next) % turnOrder.Count;
         StartTurn();
     }
 
