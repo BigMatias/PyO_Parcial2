@@ -1,4 +1,7 @@
 Reduje el Max Size de los Sprites a 128.
+Desactivé Generate Physics Shape a todos los sprites ya que no utilizan físicas.
+Activé Tight Packing al Sprite Atlas para así ahorrar aún más espacio.
+Dividí los Canvas.
 Cree un Sprite Atlas e incluí la carpeta "Art" dentro, para que todos los proximos sprites que se agreguen se añadan automaticamente.
 A todos los sprites agregados les cambié "Sprite Mode" de Multiple a Single, les saqué filtro y compresión también, ya que la compresión arruina la calidad de los sprites 2D.
 Le quite el RayCast Target a todas las imagenes y paneles del HUD, ya que en este proyecto no necesito que sean clickeables.
