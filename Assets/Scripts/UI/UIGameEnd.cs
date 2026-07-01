@@ -46,10 +46,12 @@ public class UIGameEnd : MonoBehaviour
     
     private void OnRetryWinButtonClicked()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("GameScene");
     }
     private void OnRetryLoseButtonClicked()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("GameScene");
 
     }

@@ -19,18 +19,13 @@ public class EnemyAI : MonoBehaviour
         while (movesRemaining > 0)
         {
             Vector2Int direction = GetRandomDirection();
-            Vector2Int currentPos = mapManager.enemyPosition[enemy.enemyType];
-            Vector2Int newPos = currentPos + direction;
+            Vector2Int newPos = enemy.GridPosition + direction;
 
             if (mapManager.CheckIsValidPosition(newPos))
             {
                 mapManager.MoveEnemy(enemy.enemyType, newPos);
-                movesRemaining--;
             }
-            else
-            {
-                movesRemaining--;
-            }
+            movesRemaining--;
         }
     }
 
@@ -52,22 +47,29 @@ public class EnemyAI : MonoBehaviour
         if (closestPlayers.Count == 0) return;
 
         Player target = closestPlayers[Random.Range(0, closestPlayers.Count)];
-        enemy.TryPerformAction(ActionType.MeleeAttack, target);
-        if (!enemy.TryPerformAction(ActionType.MeleeAttack, target))
-            enemy.TryPerformAction(ActionType.RangedAttack, target);
+
+        foreach (ActionStrategy strategy in enemy.GetActionStrategies())
+        {
+            if (strategy.CanAct(strategy.ActionType, enemy.GridPosition, target.GridPosition))
+            {
+                strategy.Act(enemy, target);
+                return;
+            }
+        }
     }
 
     private List<Player> FindClosestPlayers(Enemy enemy)
     {
         List<Player> result = new List<Player>();
-        float minDistance = float.MaxValue;
+        int minDistance = int.MaxValue;
 
         foreach (GameObject playerObj in players)
         {
             Player player = playerObj.GetComponent<Player>();
             if (!player.IsAlive) continue;
 
-            float distance = Vector2Int.Distance(enemy.GridPosition, player.GridPosition);
+            int distance = Mathf.Abs(enemy.GridPosition.x - player.GridPosition.x) +
+                          Mathf.Abs(enemy.GridPosition.y - player.GridPosition.y);
 
             if (distance < minDistance)
             {
@@ -75,7 +77,7 @@ public class EnemyAI : MonoBehaviour
                 result.Clear();
                 result.Add(player);
             }
-            else if (Mathf.Approximately(distance, minDistance))
+            else if (distance == minDistance)
             {
                 result.Add(player);
             }

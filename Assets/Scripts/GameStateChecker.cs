@@ -15,13 +15,11 @@ public class GameStateChecker : MonoBehaviour
         if (AnyPlayerDead())
         {
             OnDefeat?.Invoke();
-            Debug.Log("Lost");
             return;
         }
 
         if (AllEnemiesDead())
         {
-            Debug.Log("Won");
             OnVictory?.Invoke();
         }
     }

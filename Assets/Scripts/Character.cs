@@ -16,6 +16,7 @@ public abstract class Character : MonoBehaviour
     public bool IsAlive => currentHP > 0;
 
     public event Action<int> OnHPChanged;
+    public event Action<Character> OnDie;
     
     protected virtual void Awake()
     {
@@ -30,6 +31,7 @@ public abstract class Character : MonoBehaviour
         if (currentHP <= 0)
         {
             currentHP = 0;
+            OnHPChanged?.Invoke(currentHP);
             Die();
         }
     }
@@ -42,14 +44,17 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void Die()
     {
+        OnDie?.Invoke(this);
         gameObject.SetActive(false);
     }
 
     public bool TryPerformAction(ActionType actionType, Character target)
     {
+    
         foreach (ActionStrategy strategy in actionStrategies)
         {
-            if (strategy.CanAct(actionType, GridPosition, target.GridPosition))
+            bool canAct = strategy.CanAct(actionType, GridPosition, target.GridPosition);
+            if (canAct)
             {
                 strategy.Act(this, target);
                 return true;

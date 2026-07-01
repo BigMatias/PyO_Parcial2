@@ -3,10 +3,26 @@ using UnityEngine;
 public class TargetSelectionManager : MonoBehaviour
 {
     [SerializeField] private TurnManager turnManager;
-
+    
     private ActionType pendingAction;
     private bool waitingForTarget = false;
+    
+    private void Start()
+    {
+        turnManager.OnTurnStarted += HandleTurnStarted;
+    }
 
+    private void OnDestroy()
+    {
+        if (turnManager != null)
+            turnManager.OnTurnStarted -= HandleTurnStarted;
+    }
+    
+    private void HandleTurnStarted(Character character)
+    {
+        CancelSelection();
+    }
+    
     public void RequestAction(ActionType actionType)
     {
         pendingAction = actionType;
