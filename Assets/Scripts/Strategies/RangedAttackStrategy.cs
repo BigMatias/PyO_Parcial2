@@ -17,8 +17,10 @@ public class RangedAttackStrategy : ActionStrategy
     public override bool CanAct(ActionType requestedAction, Vector2Int attackerPos, Vector2Int targetPos)
     {
         if (requestedAction != ActionType) return false;
-
-        float distance = Vector2Int.Distance(attackerPos, targetPos);
+    
+        int dx = Mathf.Abs(attackerPos.x - targetPos.x);
+        int dy = Mathf.Abs(attackerPos.y - targetPos.y);
+        int distance = dx + dy;
         return distance >= minRange && distance <= maxRange;
     }
 

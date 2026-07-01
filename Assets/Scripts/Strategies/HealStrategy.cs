@@ -17,7 +17,9 @@ public class HealStrategy : ActionStrategy
     {
         if (requestedAction != ActionType) return false;
 
-        float distance = Vector2Int.Distance(attackerPos, targetPos);
+        int dx = Mathf.Abs(attackerPos.x - targetPos.x);
+        int dy = Mathf.Abs(attackerPos.y - targetPos.y);
+        int distance = dx + dy;
         return distance <= healRange;
     }
 

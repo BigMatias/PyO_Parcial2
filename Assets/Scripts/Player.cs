@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Character
+public class Player : Character, IPositionTrackable
 {
     public PlayerType playerType;
 
@@ -30,5 +30,10 @@ public class Player : Character
 
         if (hasRanged)
             actionStrategies.Add(new RangedAttackStrategy(rangedDamage, rangedMinRange, rangedMaxRange));
+    }
+    
+    public void Unregister(PositionTracker positionTracker)
+    {
+        positionTracker.RemovePlayer(playerType);
     }
 }

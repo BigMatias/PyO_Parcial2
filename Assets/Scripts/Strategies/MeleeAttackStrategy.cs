@@ -17,9 +17,11 @@ public class MeleeAttackStrategy : ActionStrategy
 
         int dx = Mathf.Abs(attackerPos.x - targetPos.x);
         int dy = Mathf.Abs(attackerPos.y - targetPos.y);
-        return dx <= 1 && dy <= 1 && (dx + dy) > 0;
-    }
+        int distance = Mathf.Max(dx, dy);
 
+        return distance == 1;
+    }
+    
     public override void Act(Character attacker, Character target)
     {
         target.TakeDamage(damage);

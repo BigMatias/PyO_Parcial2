@@ -37,9 +37,7 @@ public class TurnManager : MonoBehaviour
     private void StartTurn()
     {
         while (!turnOrder[currentIndex].IsAlive)
-        {
             currentIndex = (currentIndex + 1) % turnOrder.Count;
-        }
 
         CurrentCharacter = turnOrder[currentIndex];
         MovesRemaining = CurrentCharacter.Speed;
@@ -50,6 +48,7 @@ public class TurnManager : MonoBehaviour
         if (CurrentCharacter is Enemy enemy)
         {
             PerformEnemyTurn(enemy);
+            gameStateChecker.CheckGameState();
         }
     }
 
@@ -58,7 +57,7 @@ public class TurnManager : MonoBehaviour
         if (HasActed || MovesRemaining <= 0) return false;
         if (!(CurrentCharacter is Player player)) return false;
 
-        Vector2Int newPos = mapManager.GetPosibleNewPosition(player.playerType, dx, dy);
+        Vector2Int newPos = mapManager.GetPossibleNewPosition(player.playerType, dx, dy);
         if (!mapManager.CheckIsValidPosition(newPos)) return false;
 
         mapManager.MovePlayer(player.playerType, newPos);

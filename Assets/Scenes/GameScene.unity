@@ -278,6 +278,9 @@ GameObject:
   m_Component:
   - component: {fileID: 159470906}
   - component: {fileID: 159470907}
+  - component: {fileID: 159470910}
+  - component: {fileID: 159470909}
+  - component: {fileID: 159470908}
   m_Layer: 0
   m_Name: GameplayArea
   m_TagString: Untagged
@@ -317,9 +320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337e6b4620530c740aa3b9bf10c4c00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridCellSize: 0.48
-  grassPrefab: {fileID: 3337749285637055757, guid: 01904e16a02d643feb9fc3f6b8f4fe37,
-    type: 3}
   players:
   - {fileID: 1009653034}
   - {fileID: 1279483157}
@@ -327,6 +327,52 @@ MonoBehaviour:
   enemies:
   - {fileID: 572113689}
   - {fileID: 1756983223}
+--- !u!114 &159470908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159470904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a421266ba43006419658efa3721b37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PositionTracker
+--- !u!114 &159470909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159470904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf456eab576dd626785166141bf12d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSpawner
+  players:
+  - {fileID: 1009653034}
+  - {fileID: 1279483157}
+  - {fileID: 541309445}
+  enemies:
+  - {fileID: 572113689}
+  - {fileID: 1756983223}
+--- !u!114 &159470910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159470904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e587b033873b0b1a9987c8bff7d2569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapVisualizer
+  gridCellSize: 0.48
+  grassPrefab: {fileID: 3337749285637055757, guid: 01904e16a02d643feb9fc3f6b8f4fe37,
+    type: 3}
 --- !u!114 &237468777 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5920926588977190450, guid: 5e94252e98836b7a78daa7bf5a0c8b02,
